@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+mainClassName = 'com.stenhouse.example.HelloWorldApplication'
+
+dependencies {
+    compile 'io.dropwizard:dropwizard-core:0.9.1'
+}
+
+run {
+    args 'server'
+}
